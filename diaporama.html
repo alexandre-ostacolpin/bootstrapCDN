@@ -25,13 +25,17 @@
         <div class="container p-4"><!-- Container auto centrée dans la page //Container-fluid, la section pleine largeur -->
             <div class="row m-2 p-2">
                 <div class="col-12">
-                    <img src="img/Montagne.4.jpg" alt="Une montagne" onclick="this.src='img/Montagne.3.jpg';this.alt='Une autre montagne magnifique';">
+                    <div class="diaporama"></div>
+                    <img src="img/3.jpg" alt="Une montagne" id="imgDiapo" class="img-fluid">
+                    <div class="row justify-content-md-center">
+                        <button type="button" class="btn btn-outline-warning my-2" id="btnDiapo">Changer d'image</button>
+                    </div>  
                 </div><!-- Fin col-->
             </div><!-- Fin de row -->
 
             <div class="row m-2 p-2">
                 <div class="col-4">
-                    <div id="diaporama">
+                    <div>
                         <img src="img/Montagne2.jpg" alt="Le mont blanc" class="img-fluid"> 
                     </div><!-- Fin diaporama -->
                 </div><!-- Fin col-->
@@ -55,7 +59,12 @@
 
     <!-- Mes scripts -->
         <script>
-            
+            document.getElementById('btnDiapo').addEventListener('click', function() {// Je sélectionne le bouton et je lui attribue au clique une fonction pour changer d'image
+                document.getElementById('imgDiapo').src = 'img/4.jpg';
+                // document.getElementById('imgDiapo').src = 'img/5.jpg';
+                // document.getElementById('imgDiapo').src = 'img/6.jpg';
+                document.getElementById('imgDiapo').alt = 'montagne';
+            })
         </script>
     </body>
 </html>
